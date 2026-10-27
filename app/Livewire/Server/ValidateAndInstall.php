@@ -59,7 +59,7 @@ class ValidateAndInstall extends Component
         $this->authorize('update', $this->server);
 
         if (! $this->server->canBeValidated()) {
-            $this->error = 'This server was transferred to another Coolify instance and cannot be revalidated here.';
+            $this->error = 'This server was transferred to another GetMind Cloud instance and cannot be revalidated here.';
             $this->server->update([
                 'validation_logs' => $this->error,
                 'is_validating' => false,

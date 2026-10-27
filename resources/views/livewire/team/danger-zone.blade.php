@@ -8,7 +8,7 @@
         ];
     @endphp
     <x-slot:title>
-        Team Danger Zone | Coolify
+        Team Danger Zone | GetMind Cloud
     </x-slot>
 
     <x-team.settings-layout>
@@ -37,11 +37,11 @@
                             @elseif($deletionBlockers === [])
                                 <p>
                                     Permanently delete <strong class="font-semibold text-black dark:text-fg">{{ currentTeam()->name }}</strong>
-                                    from Coolify. This action cannot be undone.
+                                    from GetMind Cloud. This action cannot be undone.
                                 </p>
                                 <ul class="space-y-1 text-xs">
                                     <li>• All members will lose access to this team.</li>
-                                    <li>• This team cannot be restored from Coolify after deletion.</li>
+                                    <li>• This team cannot be restored from GetMind Cloud after deletion.</li>
                                 </ul>
                             @else
                                 <p>
@@ -71,7 +71,7 @@
                                     $deletionBlockers === [])
                                 <x-modal-confirmation title="Confirm Team Deletion?" buttonTitle="Delete team"
                                     isErrorButton submitAction="delete"
-                                    :actions="['The current team will be permanently deleted from Coolify and the database.']"
+                                    :actions="['The current team will be permanently deleted from GetMind Cloud and the database.']"
                                     confirmationText="{{ currentTeam()->name }}"
                                     confirmationLabel="Enter the team name to confirm permanent deletion"
                                     shortConfirmationLabel="Team name" :confirmWithPassword="false"

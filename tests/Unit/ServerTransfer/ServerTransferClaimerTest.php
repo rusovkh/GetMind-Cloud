@@ -255,7 +255,7 @@ test('markTransferred disables the runner config and stops tracking the runners 
         $row->refresh();
         expect($row->status)->toBe(GithubRunnerStatus::Cancelled)
             ->and($row->completed_at)->not->toBeNull()
-            ->and($row->error_message)->toBe('The server was transferred to another Coolify instance. This instance stopped managing its runners.');
+            ->and($row->error_message)->toBe('The server was transferred to another GetMind Cloud instance. This instance stopped managing its runners.');
     }
 
     // Deleting the archive later must not pull the runners that now belong to the target.

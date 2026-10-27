@@ -463,9 +463,9 @@
         const position = index >= 0 ? (index + 1) + ' of ' + history.length + ' (newest first)' : 'n/a';
 
         const lines = [
-            '## Coolify Server-Timing debug dump',
+            '## GetMind Cloud Server-Timing debug dump',
             '',
-            'Use this to investigate a slow or expensive HTTP/Livewire response in Coolify (Laravel).',
+            'Use this to investigate a slow or expensive HTTP/Livewire response in GetMind Cloud (Laravel).',
             '',
             '### Selected request',
             '- **Captured at:** ' + new Date(entry.at).toISOString() + ' (local ' + formatTime(entry.at) + ')',
@@ -549,7 +549,7 @@
             '```',
             '',
             '### Notes for the assistant',
-            '- Values come from Coolify dev Server-Timing middleware (`app.server_timing`).',
+            '- Values come from GetMind Cloud dev Server-Timing middleware (`app.server_timing`).',
             '- `queries`/`html`/`mem` use Server-Timing `dur` as the metric value (not milliseconds for those three).',
             '- Client-side cost (Vite CSS/JS, paint, Livewire morph) is NOT included in `app`.',
             ''

@@ -1,6 +1,6 @@
 <div class="application-settings-form w-full">
     <x-slot:title>
-        Projects | Coolify
+        Projects | GetMind Cloud
     </x-slot>
 
     <div x-data="projectsIndex()" class="w-full">

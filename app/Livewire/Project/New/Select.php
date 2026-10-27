@@ -158,7 +158,7 @@ class Select extends Component
             [
                 'id' => 'public',
                 'name' => 'Public Git Repository',
-                'description' => 'Deploy any public Git repository. Coolify builds it from source, no credentials required.',
+                'description' => 'Deploy any public Git repository. GetMind Cloud builds it from source, no credentials required.',
                 'documentation' => 'https://coolify.io/docs/applications/ci-cd',
                 'logo' => resource_logo_url('public-repo'),
             ],

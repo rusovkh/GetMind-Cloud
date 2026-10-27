@@ -72,7 +72,7 @@ class Show extends Component
 
             if ($this->caCertificate) {
                 if (! openssl_x509_check_private_key($this->certificateContent, $this->caCertificate->ssl_private_key)) {
-                    throw new \Exception('This certificate does not match the CA private key of this server. Coolify signs database certificates with that key, so clients would fail with a certificate signature error.');
+                    throw new \Exception('This certificate does not match the CA private key of this server. GetMind Cloud signs database certificates with that key, so clients would fail with a certificate signature error.');
                 }
 
                 $this->caCertificate->ssl_certificate = $this->certificateContent;

@@ -205,7 +205,7 @@ class Advanced extends Component
 
         if (ApplicationSetting::isContainerNamePrefixInUse($prefix, $this->application->destination->server, $this->application->id)) {
             throw ValidationException::withMessages([
-                'customContainerNamePrefix' => 'This container name prefix is already in use by another application on this Coolify instance.',
+                'customContainerNamePrefix' => 'This container name prefix is already in use by another application on this GetMind Cloud instance.',
             ]);
         }
     }
@@ -335,7 +335,7 @@ class Advanced extends Component
 
             if ($this->customContainerNamePrefix && ApplicationSetting::isContainerNamePrefixInUse($this->customContainerNamePrefix, $this->application->destination->server, $this->application->id)) {
                 $this->customContainerNamePrefix = $this->application->settings->custom_container_name_prefix;
-                $this->dispatch('error', 'This container name prefix is already in use by another application on this Coolify instance.');
+                $this->dispatch('error', 'This container name prefix is already in use by another application on this GetMind Cloud instance.');
 
                 return;
             }

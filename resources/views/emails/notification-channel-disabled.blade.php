@@ -1,6 +1,6 @@
 <x-emails.layout>
 
-Coolify could not send {{ $channel }} notifications for your team {{ $failures }} times in a row, so we disabled {{ $channel }} notifications.
+GetMind Cloud could not send {{ $channel }} notifications for your team {{ $failures }} times in a row, so we disabled {{ $channel }} notifications.
 
 Reason: {{ $reason }}
 

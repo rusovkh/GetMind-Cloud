@@ -327,7 +327,7 @@ it('lets a cloud owner whose subscription ended delete the account with the serv
 
     Livewire::test(ProfileIndex::class)
         ->assertDontSee('Before you can delete your account')
-        ->assertSee('The servers, projects, and Git sources of the team &quot;Lapsed&quot; will be removed from Coolify.', false)
+        ->assertSee('The servers, projects, and Git sources of the team &quot;Lapsed&quot; will be removed from GetMind Cloud.', false)
         ->call('deleteAccount', 'password')
         ->assertRedirect(route('login'));
 

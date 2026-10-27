@@ -164,7 +164,7 @@ class GithubRunners extends Component
 
         $custom = $labels->reject(fn (string $label) => in_array($label, self::RESERVED_LABELS, true))->values();
         if ($custom->isEmpty()) {
-            throw ValidationException::withMessages(['labels' => 'Add at least one custom label, for example "coolify". Coolify only takes jobs that ask for a custom label.']);
+            throw ValidationException::withMessages(['labels' => 'Add at least one custom label, for example "coolify". GetMind Cloud only takes jobs that ask for a custom label.']);
         }
 
         return $custom->all();
@@ -284,7 +284,7 @@ class GithubRunners extends Component
     private function prepareRunnerGroup(GithubApp $githubApp): void
     {
         if ($githubApp->missingRunnerRequirements() !== []) {
-            $this->dispatch('warning', 'The GitHub App is not ready for runners. Coolify cannot take workflow jobs until you update its permissions on GitHub.');
+            $this->dispatch('warning', 'The GitHub App is not ready for runners. GetMind Cloud cannot take workflow jobs until you update its permissions on GitHub.');
 
             return;
         }

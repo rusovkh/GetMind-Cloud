@@ -7,6 +7,7 @@
     <div class="auth-shell-content">
         <div class="auth-card">
             <div class="auth-card-heading">
+                <img src="{{ asset('getmind-app-icon-adaptive.png') }}" alt="GetMind Cloud" class="size-16 object-contain" />
                 <h1>{{ $title }}</h1>
                 @if ($description)
                     <p>{{ $description }}</p>

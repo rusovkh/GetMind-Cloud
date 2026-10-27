@@ -87,9 +87,9 @@ class ServerTransferBundle
         $bundleVersion = data_get($bundle, 'coolify_version');
         $instanceVersion = (string) config('constants.coolify.version');
         if (! is_string($bundleVersion) || $bundleVersion === '') {
-            $errors[] = 'Missing coolify_version. Export the server again with Coolify '.$instanceVersion.' or newer.';
+            $errors[] = 'Missing coolify_version. Export the server again with GetMind Cloud '.$instanceVersion.' or newer.';
         } elseif (version_compare($bundleVersion, $instanceVersion, '>')) {
-            $errors[] = "This bundle was exported from Coolify {$bundleVersion}. Upgrade this instance (Coolify {$instanceVersion}) to {$bundleVersion} or newer before you import it.";
+            $errors[] = "This bundle was exported from GetMind Cloud {$bundleVersion}. Upgrade this instance (GetMind Cloud {$instanceVersion}) to {$bundleVersion} or newer before you import it.";
         }
 
         if (! isset($bundle['export_id']) || ! is_string($bundle['export_id']) || $bundle['export_id'] === '') {

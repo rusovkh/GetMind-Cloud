@@ -1,6 +1,6 @@
 <div class="h-full">
     <x-slot:title>
-        Tags > Canvas | Coolify
+        Tags > Canvas | GetMind Cloud
     </x-slot>
     <div data-environment-canvas data-mode="tags" data-endpoint="/tags/canvas"
         data-team="{{ $teamId }}" data-user="{{ auth()->id() }}"

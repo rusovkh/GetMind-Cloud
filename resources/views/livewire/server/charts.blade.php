@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        {{ data_get_str($server, 'name')->limit(10) }} > Metrics | Coolify
+        {{ data_get_str($server, 'name')->limit(10) }} > Metrics | GetMind Cloud
     </x-slot>
 
     <livewire:server.navbar :server="$server" />
@@ -39,7 +39,7 @@
                                 helper="Days of CPU and memory history to retain." />
                             <x-forms.input canGate="update" :canResource="$server" type="number" min="10"
                                 id="sentinelPushIntervalSeconds" label="Push interval" required
-                                helper="Seconds between health reports sent to Coolify." />
+                                helper="Seconds between health reports sent to GetMind Cloud." />
                         </div>
 
                         <div class="mt-4 max-w-xs">

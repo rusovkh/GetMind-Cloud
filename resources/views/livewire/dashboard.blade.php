@@ -1,6 +1,6 @@
 <div class="application-settings-form w-full">
     <x-slot:title>
-        Dashboard | Coolify
+        Dashboard | GetMind Cloud
     </x-slot>
 
     @if (session('error'))

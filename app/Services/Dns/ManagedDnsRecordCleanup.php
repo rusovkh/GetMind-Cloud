@@ -172,7 +172,7 @@ class ManagedDnsRecordCleanup
         foreach ($records as $record) {
             $this->deleteReferences($record, $keys);
             if (! $record->references()->exists()) {
-                $this->forget($record, 'The resource was transferred to another Coolify instance, which uses the record now.', 'info');
+                $this->forget($record, 'The resource was transferred to another GetMind Cloud instance, which uses the record now.', 'info');
             }
         }
     }

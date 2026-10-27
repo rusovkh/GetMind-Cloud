@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        Integration Tokens | Coolify
+        Integration Tokens | GetMind Cloud
     </x-slot>
 
     <x-security.settings-layout>

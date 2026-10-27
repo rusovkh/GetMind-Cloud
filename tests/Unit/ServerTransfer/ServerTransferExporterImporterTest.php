@@ -1931,7 +1931,7 @@ test('the checklist asks to move manual webhooks of git applications without a p
 
     $checklist = implode("\n", $this->exporter->export($this->server)['post_transfer_checklist']);
 
-    expect($checklist)->toContain('If a repository of these applications has a manual webhook to Coolify, change its URL to the target: my-app.')
+    expect($checklist)->toContain('If a repository of these applications has a manual webhook to GetMind Cloud, change its URL to the target: my-app.')
         ->toContain('{target_url}/webhooks/source/gitea/events/manual');
 });
 

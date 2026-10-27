@@ -1033,7 +1033,7 @@ it('shows an inherited internal port badge from the coolify service env port', f
         ->call('updateDomain')
         ->assertHasNoErrors()
         ->assertSee('Internal port 3000')
-        ->assertSee('Inherited from the Coolify service port', false)
+        ->assertSee('Inherited from the GetMind Cloud service port', false)
         ->assertDontSee('No internal port');
 
     expect($this->apiApp->fresh())

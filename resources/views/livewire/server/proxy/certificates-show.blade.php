@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        TLS Certificates | Coolify
+        TLS Certificates | GetMind Cloud
     </x-slot>
     <livewire:server.navbar :server="$server" />
     <div

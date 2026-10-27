@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        Cloud-Init Scripts | Coolify
+        Cloud-Init Scripts | GetMind Cloud
     </x-slot>
 
     <x-security.settings-layout>

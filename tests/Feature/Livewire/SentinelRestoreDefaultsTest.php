@@ -104,7 +104,7 @@ it('shows local troubleshooting guidance when Sentinel is out of sync', function
         ->assertSee('Open Sentinel logs')
         ->assertSeeHtml('href="'.route('server.sentinel.logs', ['server_uuid' => $this->server->uuid]).'"')
         ->assertDontSee('docker logs --tail 100 coolify-sentinel')
-        ->assertSee('Sync Sentinel to recreate it on the Coolify Docker network.')
+        ->assertSee('Sync Sentinel to recreate it on the GetMind Cloud Docker network.')
         ->assertDontSee('The remote server needs outbound access');
 });
 
@@ -119,10 +119,10 @@ it('shows remote connectivity checks when Sentinel is out of sync', function () 
     $remoteServer->sentinelHeartbeat(isReset: true);
 
     Livewire::test(Sentinel::class, ['server' => $remoteServer])
-        ->assertSee('The remote server needs outbound access to this Coolify URL.')
+        ->assertSee('The remote server needs outbound access to this GetMind Cloud URL.')
         ->assertSee('https://coolify.example.com/api/health')
         ->assertSee('Check DNS, TLS certificates, outbound firewall rules, and proxy settings.')
-        ->assertDontSee('Sync Sentinel to recreate it on the Coolify Docker network.');
+        ->assertDontSee('Sync Sentinel to recreate it on the GetMind Cloud Docker network.');
 });
 
 it('shell quotes the remote health URL in troubleshooting guidance', function () {

@@ -117,8 +117,8 @@ class DeleteUserAccount
             : collect();
 
         return $this->subscriptionConfirmationActions($user)
-            ->concat($removedTeams->map(fn (Team $team): string => "The servers, projects, and Git sources of the team \"{$team->name}\" will be removed from Coolify. Nothing is stopped on the servers."))
-            ->push('Your account will be permanently deleted from Coolify.')
+            ->concat($removedTeams->map(fn (Team $team): string => "The servers, projects, and Git sources of the team \"{$team->name}\" will be removed from GetMind Cloud. Nothing is stopped on the servers."))
+            ->push('Your account will be permanently deleted from GetMind Cloud.')
             ->values()
             ->all();
     }

@@ -9,7 +9,7 @@
     <section>
         <h2>Are you the site owner?</h2>
         <ul>
-            <li>The domain is not configured on a resource in Coolify, or its DNS points to another server.</li>
+            <li>The domain is not configured on a resource in GetMind Cloud, or its DNS points to another server.</li>
             <li>The application is stopped, still deploying, or has crashed.</li>
             <li>The application health check is failing.</li>
         </ul>

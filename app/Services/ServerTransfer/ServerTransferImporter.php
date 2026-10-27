@@ -1605,7 +1605,7 @@ class ServerTransferImporter
         foreach ($this->pendingSqliteLinks as $link) {
             $sqlite = $this->databaseMap[$link['sqlite_uuid']] ?? null;
             if (! $sqlite instanceof StandaloneSqlite) {
-                $warnings[] = "Volume {$link['volume']->name} mounts a SQLite database that is not part of this transfer. Coolify does not protect it when that database or its applications are deleted.";
+                $warnings[] = "Volume {$link['volume']->name} mounts a SQLite database that is not part of this transfer. GetMind Cloud does not protect it when that database or its applications are deleted.";
 
                 continue;
             }

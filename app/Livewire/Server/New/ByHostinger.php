@@ -388,11 +388,11 @@ class ByHostinger extends Component
             return redirectRoute($this, 'server.show', [$server->uuid]);
         } catch (\Throwable $e) {
             if ($virtualMachineId) {
-                logger()->warning('Hostinger VPS was purchased but could not be saved in Coolify', [
+                logger()->warning('Hostinger VPS was purchased but could not be saved in GetMind Cloud', [
                     'team_id' => currentTeam()->id,
                     'hostinger_virtual_machine_id' => $virtualMachineId,
                 ]);
-                $this->dispatch('error', "Hostinger VPS {$virtualMachineId} was purchased but could not be saved in Coolify. Manage it in hPanel.");
+                $this->dispatch('error', "Hostinger VPS {$virtualMachineId} was purchased but could not be saved in GetMind Cloud. Manage it in hPanel.");
             }
 
             return handleError($e, $this);

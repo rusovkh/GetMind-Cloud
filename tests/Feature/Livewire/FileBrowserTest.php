@@ -195,8 +195,8 @@ it('explains when neither the shell nor the helper container can open the files'
         ->call('loadFiles')
         ->assertSet('loadFailed', false)
         ->assertSet('shellUnavailable', true)
-        ->assertSee('Coolify cannot open the files of this container.')
-        ->assertSee('The server could not pull the Coolify helper image')
+        ->assertSee('GetMind Cloud cannot open the files of this container.')
+        ->assertSee('The server could not pull the GetMind Cloud helper image')
         ->assertDontSee('This folder is empty')
         ->assertDontSee('Upload a file to this folder');
 });

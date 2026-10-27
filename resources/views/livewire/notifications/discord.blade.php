@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        Discord Notifications | Coolify
+        Discord Notifications | GetMind Cloud
     </x-slot>
 
     <x-notification.settings-layout>

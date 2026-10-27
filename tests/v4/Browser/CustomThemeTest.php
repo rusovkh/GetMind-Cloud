@@ -96,7 +96,7 @@ it('converts an older one-color custom theme to four colors', function () {
         ->toBe('#e7efeb,#daf0e2,#16a34a,#f3f7f5');
 });
 
-it('switches back to the built-in Dark theme with the Coolify preset', function () {
+it('switches back to the built-in Dark theme with the GetMind Cloud preset', function () {
     loginAndSkipBoarding();
 
     $page = visit('/profile/appearance')->assertSee('Color theme');
@@ -109,7 +109,7 @@ it('switches back to the built-in Dark theme with the Coolify preset', function 
 
     $page = $page->navigate('/profile/appearance')->assertSee('Color theme');
     $page->click('Custom')->assertSee('Presets');
-    $page->click('Coolify')->click('Save theme');
+    $page->click('GetMind Cloud')->click('Save theme');
 
     expect(customThemeState($page))->toMatchArray([
         'theme' => 'dark',

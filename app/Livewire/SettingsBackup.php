@@ -78,7 +78,7 @@ class SettingsBackup extends Component
                 $this->database->forceFill([
                     'id' => 0,
                     'name' => 'coolify-db',
-                    'description' => 'Coolify database',
+                    'description' => 'GetMind Cloud database',
                     'postgres_user' => $envs['POSTGRES_USER'],
                     'postgres_password' => $envs['POSTGRES_PASSWORD'],
                     'postgres_db' => $envs['POSTGRES_DB'],

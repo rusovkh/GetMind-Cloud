@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        Sentinel Configuration | Coolify
+        Sentinel Configuration | GetMind Cloud
     </x-slot>
     <livewire:server.navbar :server="$server" />
     <div

@@ -9,7 +9,7 @@
             </div>
             <div class="application-settings-section-body">
                 <x-empty title="No Gitea Apps"
-                    description="Create an app to grant Coolify access to selected repositories."
+                    description="Create an app to grant GetMind Cloud access to selected repositories."
                     icon-name="sources">
                     <x-slot:contents>
                         <x-modal-input buttonTitle="+ Add Gitea App" title="New Gitea App" closeOutside="false">

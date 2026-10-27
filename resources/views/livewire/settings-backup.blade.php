@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        Instance Backup | Coolify
+        Instance Backup | GetMind Cloud
     </x-slot>
 
     <x-settings.layout>
@@ -27,7 +27,7 @@
                     :status="data_get($database, 'status')" />
 
                 <x-application.settings-section title="Backup before update"
-                    description="Back up the Coolify database before an update is installed. If the backup fails, the update is not installed.">
+                    description="Back up the GetMind Cloud database before an update is installed. If the backup fails, the update is not installed.">
                     <div class="max-w-md">
                         <x-forms.listbox id="is_backup_before_update_enabled" label="Database backup"
                             onChange="instantSave" :options="[
@@ -42,7 +42,7 @@
             @else
                 <x-application.settings-section title="Instance backup">
                     <x-empty title="Backup is not configured"
-                        description="Coolify needs an internal database resource to create automatic backups."
+                        description="GetMind Cloud needs an internal database resource to create automatic backups."
                         icon-name="database" size="sm">
                         <x-slot:actions>
                             <x-forms.button wire:click="addCoolifyDatabase" isHighlighted>

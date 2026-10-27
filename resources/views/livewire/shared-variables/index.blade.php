@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        Shared Variables | Coolify
+        Shared Variables | GetMind Cloud
     </x-slot>
 
     @php

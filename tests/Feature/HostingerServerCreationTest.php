@@ -66,7 +66,7 @@ it('uses the current cloud provider UI and Hostinger affiliate link', function (
     Livewire::test(ByHostinger::class)
         ->assertSee('Hostinger account')
         ->assertSee('https://www.hostinger.com/vps/coolify-hosting?ref=coolify.io', false)
-        ->assertSee("through Coolify's affiliate link.", false);
+        ->assertSee("through the affiliate link.", false);
 
     Livewire::test(ByHostinger::class, ['selectedTokenUuid' => $this->token->uuid])
         ->set('loading_data', false)
@@ -325,7 +325,7 @@ it('splits Hostinger templates into plain operating systems and operating system
         ->assertSet('selected_app_template_id', null)
         ->assertSet('selected_template_id', 1130)
         ->assertSee('Operating system with application')
-        ->assertSee('can conflict with the Coolify proxy on ports 80 and 443', false);
+        ->assertSee('can conflict with the GetMind Cloud proxy on ports 80 and 443', false);
 
     expect(collect($component->instance()->osTemplates)->pluck('name')->all())
         ->toBe(['Debian 13', 'Ubuntu 24.04 LTS'])

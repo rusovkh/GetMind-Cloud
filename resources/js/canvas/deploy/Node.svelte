@@ -80,7 +80,7 @@
       {/each}
       <!-- Save only creates the resources in Coolify; Deploy also starts them. -->
       <div class="cv-actions">
-        <button type="button" class="button cv-deploy-now" disabled={!!cv.running} title="Create the resources in Coolify without starting them" onpointerdown={stop} onclick={() => runFlow('save')}>
+        <button type="button" class="button cv-deploy-now" disabled={!!cv.running} title="Create the resources in GetMind Cloud without starting them" onpointerdown={stop} onclick={() => runFlow('save')}>
           <span>{cv.running === 'save' ? 'Working…' : 'Save only'}</span>
         </button>
         <button type="button" class="button button-highlighted cv-deploy-now" disabled={!!cv.running} title="Create the resources and deploy them" onpointerdown={stop} onclick={() => runFlow('deploy')}>

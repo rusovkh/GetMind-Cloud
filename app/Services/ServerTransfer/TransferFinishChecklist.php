@@ -184,7 +184,7 @@ class TransferFinishChecklist
     {
         return $this->update($server, $key, function (array $item) use ($server) {
             if ($this->fixLabel($item) === null) {
-                throw new RuntimeException('Coolify cannot fix this step. Do it by hand, then mark it as done.');
+                throw new RuntimeException('GetMind Cloud cannot fix this step. Do it by hand, then mark it as done.');
             }
             $this->runFix($server, $item);
 
@@ -268,7 +268,7 @@ class TransferFinishChecklist
             // A Docker image application keeps a default git_repository, but it never deploys from git.
             if (! in_array($application->uuid, $gitSourceApplications, true) && $application->build_pack !== 'dockerimage' && filled($application->git_repository) && (! $application->source || data_get($application->source, 'is_public') === true)) {
                 $items[] = $this->item('manual_webhook', $application->uuid, "Manual webhook of {$application->name}",
-                    'If the repository has a webhook to Coolify, change its URL, then push once.',
+                    'If the repository has a webhook to GetMind Cloud, change its URL, then push once.',
                     array_map(fn (string $provider, string $label) => ['label' => $label, 'value' => "{$this->instanceUrl()}/webhooks/source/{$provider}/events/manual"],
                         ['github', 'gitlab', 'bitbucket', 'gitea'], ['GitHub', 'GitLab', 'Bitbucket', 'Gitea']));
             }
@@ -337,7 +337,7 @@ class TransferFinishChecklist
             'github_runners' => $server->githubRunnerConfig()->value('is_enabled')
                 ? ['ok', 'GitHub runners are enabled.', null]
                 : ['action', 'Disabled after the transfer. Enable them when the GitHub App sends its webhooks here.', null],
-            default => throw new RuntimeException('Coolify cannot check this step. Do it by hand, then mark it as done.'),
+            default => throw new RuntimeException('GetMind Cloud cannot check this step. Do it by hand, then mark it as done.'),
         };
     }
 
@@ -348,7 +348,7 @@ class TransferFinishChecklist
             'sentinel' => $server->restartSentinel(),
             'dns_record' => app(CloudflareDnsProvider::class)->reclaimRecord(ManagedDnsRecord::where('uuid', $item['subject'])->firstOrFail())
                 ? ManagedDnsRecord::where('uuid', $item['subject'])->update(['owned' => true])
-                : throw new RuntimeException('Coolify could not take ownership: the record changed at Cloudflare, or Cloudflare cannot be reached.'),
+                : throw new RuntimeException('GetMind Cloud could not take ownership: the record changed at Cloudflare, or Cloudflare cannot be reached.'),
         };
     }
 
@@ -501,7 +501,7 @@ class TransferFinishChecklist
         try {
             [$status, $message, $error] = $change($finish['items'][$index]) + [2 => null];
         } catch (Throwable $e) {
-            [$status, $message, $error] = ['action', 'Coolify could not do this step.', $e->getMessage()];
+            [$status, $message, $error] = ['action', 'GetMind Cloud could not do this step.', $e->getMessage()];
         }
 
         return DB::transaction(function () use ($server, $key, $status, $message, $error) {

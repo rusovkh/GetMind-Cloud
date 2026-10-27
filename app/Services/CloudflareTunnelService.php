@@ -112,7 +112,7 @@ class CloudflareTunnelService
         }
         // Another Coolify instance uses the tunnel of a transferred server.
         if ($server->isTransferredAway()) {
-            return ['This server is managed by another Coolify instance.'];
+            return ['This server is managed by another GetMind Cloud instance.'];
         }
 
         $warnings = [];
@@ -255,7 +255,7 @@ class CloudflareTunnelService
             }
 
             return match ($result) {
-                ManagedDnsDeletionResult::ChangedExternally => "The DNS record {$record->name} changed outside Coolify and was left untouched.",
+                ManagedDnsDeletionResult::ChangedExternally => "The DNS record {$record->name} changed outside GetMind Cloud and was left untouched.",
                 ManagedDnsDeletionResult::Failed, ManagedDnsDeletionResult::Busy => "The DNS record {$record->name} could not be deleted. Delete it in Cloudflare.",
                 default => null,
             };

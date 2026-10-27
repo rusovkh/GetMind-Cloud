@@ -136,7 +136,7 @@
                 <a href={url} target="_blank" rel="noopener noreferrer" title="Open {url}">{url.replace(/^https?:\/\//, '')}<Icon name={ICONS.out} /></a>
               {/each}
             {:else}
-              <a href={cv.result.href} target="_blank">Open in Coolify</a>
+              <a href={cv.result.href} target="_blank">Open in GetMind Cloud</a>
             {/if}
             <button class="cv-x" title="Hide" onclick={hideResult}><Icon name={ICONS.x} /></button>
           </div>

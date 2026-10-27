@@ -400,7 +400,7 @@ test('start logs every check as OK and the queued transfer', function () {
     app(ServerTransferMigrator::class)->start($this->server, 'https://8.8.8.8', 'token');
 
     $log = collect(data_get($this->server->fresh()->server_metadata, 'migration.log'))->pluck('message');
-    expect($log)->toContain('OK: the server is not the Coolify host.')
+    expect($log)->toContain('OK: the server is not the GetMind Cloud host.')
         ->toContain('OK: this instance manages the server.')
         ->toContain('OK: no deployment is queued or running on the server.')
         ->toContain('OK: this instance can connect to the server over SSH.')

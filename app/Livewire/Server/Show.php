@@ -372,7 +372,7 @@ class Show extends Component
                 $this->dispatch(
                     'error',
                     'Cannot revalidate',
-                    'This server was transferred to another Coolify instance. Manage it from the target instance instead.'
+                    'This server was transferred to another GetMind Cloud instance. Manage it from the target instance instead.'
                 );
 
                 return;
@@ -443,7 +443,7 @@ class Show extends Component
             'server_name' => $this->server->name,
         ]);
 
-        $this->dispatch('success', 'This Coolify instance now manages the server.');
+        $this->dispatch('success', 'This GetMind Cloud instance now manages the server.');
     }
 
     public function checkLocalhostConnection()

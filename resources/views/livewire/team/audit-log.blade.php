@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        Team Audit Log | Coolify
+        Team Audit Log | GetMind Cloud
     </x-slot>
 
     <x-team.settings-layout>

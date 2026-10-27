@@ -3,7 +3,7 @@
         <div wire:poll.3s="checkDownloads" class="hidden"></div>
     @endif
     <x-slot:title>
-        {{ data_get_str($resource, 'name')->limit(10) }} > Files | Coolify
+        {{ data_get_str($resource, 'name')->limit(10) }} > Files | GetMind Cloud
     </x-slot>
 
     @if ($type === 'application')
@@ -156,7 +156,7 @@
             </x-empty>
         @elseif ($shellUnavailable)
             <x-empty title="File browser is not available"
-                description="Coolify cannot open the files of this container. {{ $helperError }}">
+                description="GetMind Cloud cannot open the files of this container. {{ $helperError }}">
                 <x-slot:icon>
                     <x-reicon name="folder" class="size-8" />
                 </x-slot:icon>

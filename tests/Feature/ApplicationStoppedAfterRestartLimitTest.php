@@ -92,7 +92,7 @@ it('shows a stopped after restart limit warning badge', function () {
 
     expect($html)->toContain('Restart limit reached')
         ->not->toContain('Stopped after reaching restart limit (2/2).')
-        ->and($html)->toContain('Container has crashed and Coolify stopped it after 2 restart attempts.');
+        ->and($html)->toContain('Container has crashed and GetMind Cloud stopped it after 2 restart attempts.');
 });
 
 it('does not show the restart limit warning for a normal manual stop', function () {

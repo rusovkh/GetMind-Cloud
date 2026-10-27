@@ -1034,7 +1034,7 @@ describe('storage page', function () {
         $section = externalVolumesSection($html, $application->uuid);
 
         expect($section)->toContain('External volumes')
-            ->toContain('Managed outside Coolify. Coolify never removes these volumes.')
+            ->toContain('Managed outside GetMind Cloud. GetMind Cloud never removes these volumes.')
             ->toContain('shared-data')
             ->toContain('existing-shared-volume')
             ->toContain('/data')

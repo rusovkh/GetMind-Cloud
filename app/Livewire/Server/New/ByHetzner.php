@@ -631,7 +631,7 @@ class ByHetzner extends Component
 
         // Prepare SSH keys array: Coolify key + user-selected Hetzner keys
         $sshKeys = array_merge(
-            [$sshKeyId], // Coolify key (always included)
+            [$sshKeyId], // GetMind Cloud key (always included)
             $this->selectedHetznerSshKeyIds // User-selected Hetzner keys
         );
 

@@ -45,6 +45,6 @@ class IntegrationTokenValidator
     {
         $name = IntegrationToken::PROVIDER_NAMES[$provider] ?? ucfirst($provider);
 
-        return "Could not connect to the {$name} API. Check the network connection of Coolify and try again.";
+        return "Could not connect to the {$name} API. Check the network connection of GetMind Cloud and try again.";
     }
 }

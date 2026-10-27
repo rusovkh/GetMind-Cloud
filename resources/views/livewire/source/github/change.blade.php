@@ -1,6 +1,6 @@
 <div>
     <x-slot:title>
-        {{ $github_app->name ?: 'GitHub App' }} | Sources | Coolify
+        {{ $github_app->name ?: 'GitHub App' }} | Sources | GetMind Cloud
     </x-slot>
 
     @if (session('error'))
@@ -146,7 +146,7 @@
                                                     ['value' => false, 'label' => 'Only this team'],
                                                     ['value' => true, 'label' => 'Every team on this instance'],
                                                 ]"
-                                                    helper="System-wide GitHub Apps can be used by every team on this Coolify instance."
+                                                    helper="System-wide GitHub Apps can be used by every team on this GetMind Cloud instance."
                                                     :disabled="!auth()->user()->can('update', $github_app)" />
                                             </div>
                                             @endcan
@@ -190,12 +190,12 @@
                                                 <p>
                                                     Permanently delete
                                                     <strong class="font-semibold text-black dark:text-fg">{{ $name ?: 'this GitHub App' }}</strong>
-                                                    from Coolify. Applications using this source will need another Git provider configured.
+                                                    from GetMind Cloud. Applications using this source will need another Git provider configured.
                                                 </p>
                                                 <ul class="space-y-1 text-xs">
                                                     <li>• The App registration on GitHub is not removed automatically.</li>
                                                     <li>• Linked applications keep their Git settings until you change them.</li>
-                                                    <li>• This source cannot be restored from Coolify after deletion.</li>
+                                                    <li>• This source cannot be restored from GetMind Cloud after deletion.</li>
                                                 </ul>
                                             <x-slot:action>
                                                 @can('delete', $github_app)
@@ -289,7 +289,7 @@
                                         ['value' => true, 'label' => 'Use a custom endpoint'],
                                     ]"
                                     x-model="useCustomWebhookEndpoint"
-                                    helper="Use a custom public URL when Coolify is behind a tunnel or reverse proxy." />
+                                    helper="Use a custom public URL when GetMind Cloud is behind a tunnel or reverse proxy." />
                                 <div x-show="!useCustomWebhookEndpoint">
                                     <x-forms.listbox id="webhook_endpoint" label="Instance endpoint"
                                         :options="$endpointOptions" x-model="webhookEndpoint" />
@@ -317,7 +317,7 @@
                                     ['value' => false, 'label' => 'Do not update pull requests'],
                                     ['value' => true, 'label' => 'Read and update pull requests'],
                                 ]"
-                                helper="Write access lets Coolify post deployment status and links on pull requests." />
+                                helper="Write access lets GetMind Cloud post deployment status and links on pull requests." />
 
                             <x-forms.listbox id="github_runners" label="GitHub Actions runners"
                                 :disabled="blank($github_app->organization)"

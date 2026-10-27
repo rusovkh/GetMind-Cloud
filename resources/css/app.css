@@ -6154,14 +6154,9 @@ html .application-settings-navigation .menu-item-icon {
     inherits: false;
 }
 
-/* Canvases at full zoom: the grid dots turn into small Coolify logos, one
-   per 20px tile. setCanvasDots() (environment-canvas.js) sets .canvas-zoom-max. */
+/* Canvases at full zoom use a faint GetMind Cloud mark per 20px tile. */
 .canvas-zoom-max {
-    --canvas-dots-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath transform='translate(8 8) scale(0.0125)' d='M64 256H0V64h64Zm0-192V0h256v64Zm0 192h256v64H64Z' fill='rgb(0 0 0 / 0.13)'/%3E%3C/svg%3E");
-}
-
-html.dark .canvas-zoom-max {
-    --canvas-dots-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath transform='translate(8 8) scale(0.0125)' d='M64 256H0V64h64Zm0-192V0h256v64Zm0 192h256v64H64Z' fill='rgb(255 255 255 / 0.09)'/%3E%3C/svg%3E");
+    --canvas-dots-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADfSURBVDhPY2AYBaOABuDWP3aGbW/4GOb842VY/IaPYds/dnQlxIOdz7kZ9v8y0T/2yyz63C9ToZW/zBgm/jdmmPmfC10pcWD/JxHOXb8sTjz7Zfzr6y/jBWd/GTPU/7JgqP8kgq6UOLDun7DNvl/mlx7+Mj5855fx2Tu/jCOWfTVniP0ojK6UODDzv0jHmV8WHz78Mv7665cxiJ6466MFgw+5Luz8x6u66J95/f5fFjMO/TKff/irhULFR3MGv9e86EqJB/X/+Bgq/4ky5H4SZUj8J8rg8YYPXckoGGkAADFEW/vJVQ6wAAAAAElFTkSuQmCC");
 }
 
 .canvas-zoom-max [data-ec-viewport] {

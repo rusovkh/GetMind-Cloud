@@ -140,7 +140,7 @@ test('the Cloudflare tunnel of an archive is not changed at Cloudflare', functio
 
     $warnings = $tunnels->tearDown($server);
 
-    expect($warnings)->toBe(['This server is managed by another Coolify instance.'])
+    expect($warnings)->toBe(['This server is managed by another GetMind Cloud instance.'])
         ->and(fn () => $tunnels->setUp($server, $this->cloudflare, 'ssh.example.com'))->toThrow(RuntimeException::class, 'managed by another Coolify instance')
         ->and($server->fresh()->settings->cloudflare_tunnel_id)->toBe('tun-1');
     Http::assertNothingSent();

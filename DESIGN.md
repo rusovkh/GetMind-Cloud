@@ -238,10 +238,11 @@ Class names below are examples. Keep the values and structure.
 
 - The logo cell is the top of the sidebar column, in the 48px top bar. It is
   as wide as the sidebar: 224px expanded, 64px collapsed.
-- Expanded: the wordmark (15px semibold, tight tracking, `--ui-fg`), then the
-  version on the same baseline (10.5px medium, `--ui-fg-faint`), with 6px
-  between them and 16px side padding. An update badge sits at the right end.
-- Collapsed: only the 20px logo mark, centered. The cell gets a bottom border
+- Expanded: the GetMind Cloud wordmark (15px semibold, tight tracking,
+  `--ui-fg`), with the version (10.5px medium, `--ui-fg-faint`) and update
+  badge on a second row. Use 16px side padding; the version truncates so the
+  update badge fits inside the sidebar width.
+- Collapsed: only the 32px GetMind Cloud icon, centered. The cell gets a bottom border
   so that it lines up with the top bar edge.
 - The update badge is a small pill: 18px high, 6px side padding, 9.5px
   semibold text, fully rounded, a 10% fill, and a 25% inset ring of the same
@@ -755,11 +756,11 @@ color. Row-hover states keep the lighter `dark:hover:bg-white/[0.025]`.
 - Nested items sit behind a thin 1px guide line (`.nav-children`) and use the
   same selected pill, not a thick box border.
 - The logo cell (`.app-topbar-brand` in `layouts/app.blade.php`) is `w-56`
-  expanded and `w-16` collapsed. Expanded, it shows the `Coolify` wordmark
-  (`text-[15px] font-semibold tracking-tight`), `<x-version>`
-  (`text-[10.5px]`, `text-fg-faint` in dark), and the update badge
+  expanded and `w-16` collapsed. Expanded, it shows the `GetMind Cloud` wordmark
+  (`text-[15px] font-semibold tracking-tight`). A second row holds `<x-version>`
+  (`text-[10.5px]`, `text-fg-faint` in dark, truncated) and the update badge
   (`livewire:upgrade`, instance admins on self-hosted only) at `ml-auto`.
-  Collapsed, it shows only `/coolify-logo.svg` at `size-5` and adds
+  Collapsed, it shows only `/getmind-app-icon-adaptive.png` at `size-8` and adds
   `border-b`.
 - The update badge sits on the version row: an 18px fully rounded pill with
   9.5px semibold text. It is `bg-coollabs/10 text-coollabs ring-coollabs/25` in
@@ -772,7 +773,7 @@ color. Row-hover states keep the lighter `dark:hover:bg-white/[0.025]`.
 - The mobile top bar (`MOBILE TOP BAR` in `layouts/app.blade.php`, `lg:hidden`)
   is `sticky top-0 z-40`, `px-4 py-3 sm:px-6`, `bg-white/95 dark:bg-panel/95
   backdrop-blur-sm` with `border-neutral-200/60 dark:border-white/[0.06]`.
-  Left: `/coolify-logo.svg` (18px) in a `size-8 rounded-lg bg-neutral-100
+  Left: `/getmind-app-icon-adaptive.png` (32px) in a `size-8 rounded-lg bg-neutral-100
   dark:bg-white/[0.06]` tile, then `livewire:switch-team`. Right (`gap-1`):
   `#configuration-warning-hud-slot-mobile`, `deployments-indicator
   variant="mobile"`, the update badge (`livewire:upgrade key="mobile-upgrade"`,

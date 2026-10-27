@@ -78,7 +78,7 @@
         window.customThemePresets = [
             // The built-in Dark theme, not a custom theme. Its colors start the fields when the user edits it. The sidebar is
             // the color that the Dark sidebar shows: #120e1a with its 9% purple wash.
-            { name: 'Coolify', theme: null, swatch: { sidebar: '#1a0f2d', selected: '#1c1c1c', accent: '#6b16ed', background: '#0a0a0a' } },
+            { name: 'GetMind Cloud', theme: null, swatch: { sidebar: '#1a0f2d', selected: '#1c1c1c', accent: '#6b16ed', background: '#0a0a0a' } },
             { name: 'Midnight', theme: { sidebar: '#0f172a', selected: '#2e4a7d', accent: '#f2458f', background: '#1a2338' } },
             { name: 'Forest', theme: { sidebar: '#12342b', selected: '#2c6e57', accent: '#f4b860', background: '#1b2a25' } },
             { name: 'Ember', theme: { sidebar: '#3b1410', selected: '#8f2d1f', accent: '#ffb86b', background: '#241816' } },
@@ -314,19 +314,18 @@
     <meta name="robots" content="noindex">
     <meta name="theme-color" content="#101010" id="theme-color-meta" />
     <meta name="color-scheme" content="dark light" />
-    <meta name="Description" content="Coolify: An open-source & self-hostable Heroku / Netlify / Vercel alternative" />
+    <meta name="Description" content="GetMind Cloud: An open-source & self-hostable Heroku / Netlify / Vercel alternative" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@coolifyio" />
-    <meta name="twitter:title" content="Coolify" />
+    <meta name="twitter:title" content="GetMind Cloud" />
     <meta name="twitter:description" content="An open-source & self-hostable Heroku / Netlify / Vercel alternative." />
-    <meta name="twitter:image" content="https://cdn.coollabs.io/og-images/coolify.png" />
+    <meta name="twitter:image" content="{{ asset('getmind-app-icon-adaptive.png') }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://coolify.io" />
-    <meta property="og:title" content="Coolify" />
+    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:title" content="GetMind Cloud" />
     <meta property="og:description" content="An open-source & self-hostable Heroku / Netlify / Vercel alternative." />
-    <meta property="og:site_name" content="Coolify" />
-    <meta property="og:image" content="https://cdn.coollabs.io/og-images/coolify.png" />
+    <meta property="og:site_name" content="GetMind Cloud" />
+    <meta property="og:image" content="{{ asset('getmind-app-icon-adaptive.png') }}" />
     @use('App\Models\InstanceSettings')
     @php
 
@@ -341,16 +340,11 @@
             }
         }
     @endphp
-    <title>{{ $name }}{{ $title ?? 'Coolify' }}</title>
-    @env('local')
-        <link rel="icon" href="{{ asset('coolify-logo-dev-transparent.png') }}" type="image/png" />
-    @else
-        <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="32x32" />
-        <link rel="icon" href="{{ asset('coolify-logo.svg') }}" type="image/svg+xml" />
-    @endenv
-    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}" />
+    <title>{{ $name }}{{ $title ?? 'GetMind Cloud' }}</title>
+    <link rel="icon" href="{{ asset('getmind-app-icon-adaptive.png') }}" type="image/png" />
+    <link rel="apple-touch-icon" href="{{ asset('getmind-app-icon-adaptive.png') }}" />
     <link rel="manifest" href="{{ asset('site.webmanifest') }}" />
-    <meta name="apple-mobile-web-app-title" content="Coolify" />
+    <meta name="apple-mobile-web-app-title" content="GetMind Cloud" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/js/app.js', 'resources/css/app.css'])
     <script>
@@ -365,9 +359,6 @@
             display: none !important;
         }
     </style>
-    @if (config('app.name') == 'Coolify Cloud')
-        <script defer data-domain="app.coolify.io" src="https://analytics.coollabs.io/js/plausible.js"></script>
-    @endif
     @auth
         <script type="text/javascript" src="{{ URL::asset('js/echo.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/pusher.js') }}"></script>

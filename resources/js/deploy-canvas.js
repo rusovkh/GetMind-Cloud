@@ -11,7 +11,7 @@
 import { api } from './canvas-core.js';
 
 // ── Settings ───────────────────────────────────────────────────────────
-export const LOG_POLL_MS = 2000;       // Deployment log refresh (Coolify's own log view uses 2 s too).
+export const LOG_POLL_MS = 2000;       // Deployment log refresh (GetMind Cloud's own log view uses 2 s too).
 export const STORE = 'coolify-canvas';  // localStorage prefix (flow, view).
 
 // ── Small helpers ──────────────────────────────────────────────────────
@@ -312,7 +312,7 @@ export const TYPES = {
     title: 'Domains', sub: 'Your own public addresses', stage: 'config', icon: ICONS.globe, for: ['git', 'image', 'dockerfile'],
     fields: [
       { key: 'domains', label: 'Domains', kind: 'textarea', placeholder: 'https://app.example.com', required: true, mono: true, rows: 2 },
-      { key: 'note', kind: 'note', text: 'Without this step, Coolify makes an address from the server’s wildcard domain (or sslip.io).' },
+      { key: 'note', kind: 'note', text: 'Without this step, GetMind Cloud makes an address from the server’s wildcard domain (or sslip.io).' },
     ],
     run: async (ctx, d) => {
       const domains = domainList(d.domains);
